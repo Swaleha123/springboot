@@ -1,0 +1,5 @@
+package com.example.demo.stockprice;
+
+public class JSONStockExchangeClient {
+
+}

@@ -1,0 +1,16 @@
+package com.example.demo.stockprice.dao;
+
+import java.util.Optional;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.example.demo.stockprice.pojos.StockExchange;
+
+
+
+
+public interface StockExchangeRepository extends CrudRepository<StockExchange,Integer> {
+
+	Optional<StockExchange> findById(String id);
+
+}
