@@ -1,0 +1,25 @@
+package com.example.demo.stockprice.pojos;
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+@Entity
+@Table(name="stockprice")
+public class StockPrice {
+			
+			private String companyCode;
+			@Id
+			private String stockExchange;
+			private Integer currentPrice;
+			private String date;
+			private String time;
+			private String uploadFile;
+			
+
+		
+			
+}

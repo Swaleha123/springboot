@@ -14,21 +14,54 @@ public class StockPrice {
 			private String companyCode;
 			@Id
 			private String stockExchange;
-			private float currentPrice;
-		 Date date=new Date();
-		 @Transient
-		 List<StockExchange>StockExchangeList;
+			private Integer currentPrice;
+			private String date;
+			private String time;
+			private String uploadFile;
+			 @Transient
+			 List<StockExchange>StockExchangeList;
 
-			public List<StockExchange> getStockExchangeList() {
-			return StockExchangeList;
+				public List<StockExchange> getStockExchangeList() {
+				return StockExchangeList;
+			}
+			public void setStockExchangeList(List<StockExchange> stockExchangeList) {
+				StockExchangeList = stockExchangeList;
+			}
+		public Integer getCurrentPrice() {
+				return currentPrice;
+			}
+			public void setCurrentPrice(Integer currentPrice) {
+				this.currentPrice = currentPrice;
+			}
+
+		
+		public String getUploadFile() {
+			return uploadFile;
 		}
-		public void setStockExchangeList(List<StockExchange> stockExchangeList) {
-			StockExchangeList = stockExchangeList;
+		public void setUploadFile(String uploadFile) {
+			this.uploadFile = uploadFile;
 		}
+
+		
+		public String getDate() {
+			return date;
+		}
+		public void setDate(String date) {
+			this.date = date;
+		}
+		public String getTime() {
+			return time;
+		}
+		public void setTime(String time) {
+			this.time = time;
+		}
+		
+		
 			@Override
 			public String toString() {
 				return "StockPrice [companyCode=" + companyCode + ", stockExchange=" + stockExchange + ", currentPrice="
-						+ currentPrice + ", date=" + date + "]";
+						+ currentPrice + ", date=" + date + ", time=" + time + ", uploadFile=" + uploadFile
+						+ "]";
 			}
 						public String getCompanyCode() {
 				return companyCode;
@@ -42,18 +75,8 @@ public class StockPrice {
 			public void setStockExchange(String stockExchange) {
 				this.stockExchange = stockExchange;
 			}
-			public float getCurrentPrice() {
-				return currentPrice;
-			}
-			public void setCurrentPrice(float currentPrice) {
-				this.currentPrice = currentPrice;
-			}
-			public Date getDate() {
-				return date;
-			}
-			public void setDate(Date date) {
-				this.date = date;
-			}
+			
+			
 			
 			
 
